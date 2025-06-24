@@ -91,7 +91,7 @@
     }
 
     .greeting {
-      font-size: 1.4em;
+      font-size: 1.6em;
       font-weight: 400;
       color: rgba(255, 255, 255, 0.9);
       margin-bottom: 0.2em;
@@ -100,7 +100,7 @@
     }
 
     h1 {
-      font-size: 2.2em;
+      font-size: 2.5em;
       font-weight: 600;
       color: #ffffff;
       margin-bottom: 0.5em;
@@ -110,10 +110,33 @@
     }
 
     .subtitle {
-      font-size: 1.1em;
-      color: rgba(255, 255, 255, 0.9);
+      font-family: 'Times New Roman', serif;
+      font-size: 1.3em;
+      color: #2375A9;
       margin-bottom: 2em;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+      font-weight: 500;
+      position: relative;
+      display: inline-block;
+      padding: 0 2em;
+    }
+
+    .subtitle::before,
+    .subtitle::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 1.5em;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #2375A9, transparent);
+    }
+
+    .subtitle::before {
+      left: 0;
+    }
+
+    .subtitle::after {
+      right: 0;
     }
 
     .buttons {
@@ -181,11 +204,21 @@
       }
       
       .greeting {
-        font-size: 1.2em;
+        font-size: 1.4em;
       }
       
       h1 {
-        font-size: 1.8em;
+        font-size: 2.1em;
+      }
+
+      .subtitle {
+        font-size: 1.2em;
+        padding: 0 1.5em;
+      }
+
+      .subtitle::before,
+      .subtitle::after {
+        width: 1.2em;
       }
       
       .subtitle {
@@ -209,11 +242,21 @@
       }
       
       .greeting {
-        font-size: 1.1em;
+        font-size: 1.2em;
       }
       
       h1 {
-        font-size: 1.6em;
+        font-size: 1.8em;
+      }
+
+      .subtitle {
+        font-size: 1.1em;
+        padding: 0 1.2em;
+      }
+
+      .subtitle::before,
+      .subtitle::after {
+        width: 1em;
       }
       
       .buttons {
@@ -224,11 +267,21 @@
     /* Ensure name stays on one line */
     @media (max-width: 320px) {
       .greeting {
-        font-size: 1em;
+        font-size: 1.1em;
       }
       
       h1 {
-        font-size: 1.4em;
+        font-size: 1.6em;
+      }
+
+      .subtitle {
+        font-size: 1em;
+        padding: 0 1em;
+      }
+
+      .subtitle::before,
+      .subtitle::after {
+        width: 0.8em;
       }
     }
   </style>
@@ -265,10 +318,16 @@
     
     <div class="buttons">
       <a href="evelyn-millett-with-photo.vcf" class="button" id="save-contact" download>
-        📇 Save Contact
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+        Add to Contacts
       </a>
       <a href="https://hihello.me/p/4ac354c9-ac77-4efa-bcad-e1bc2081c8f8" class="button" id="view-card" target="_blank">
-        💼 View HiHello Card
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        Add HiHello Business Card
       </a>
     </div>
     
