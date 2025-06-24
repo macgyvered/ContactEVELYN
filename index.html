@@ -102,8 +102,15 @@
       font-size: 1.3em;
       color: #2375A9;
       margin-bottom: 2em;
-      -webkit-text-stroke: 2px white;
-      text-stroke: 2px white;
+      text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white,
+        -2px 0 0 white,
+        2px 0 0 white,
+        0 -2px 0 white,
+        0 2px 0 white;
       font-weight: 500;
       position: relative;
       display: inline-block;
@@ -118,8 +125,6 @@
       width: 1.5em;
       height: 2px;
       background: linear-gradient(90deg, transparent, #2375A9, transparent);
-      -webkit-text-stroke: 1px white;
-      text-stroke: 1px white;
       transform: translateY(-50%);
     }
 
@@ -140,10 +145,10 @@
     }
 
     .button {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5em;
+      position: relative;
       padding: 1em 1.5em;
       background: linear-gradient(135deg, #7BA977 0%, #689564 100%);
       color: white;
@@ -155,6 +160,17 @@
       transition: all 0.3s ease;
       border: 2px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
+    }
+
+    .button svg {
+      position: absolute;
+      left: 1.2em;
+      flex-shrink: 0;
+    }
+
+    .button-text {
+      width: 100%;
+      text-align: center;
     }
 
     .button:hover {
@@ -293,13 +309,13 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
         </svg>
-        Add to Contacts
+        <span class="button-text">Add to Contacts</span>
       </a>
       <a href="https://hihello.me/p/4ac354c9-ac77-4efa-bcad-e1bc2081c8f8" class="button" id="view-card" target="_blank">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
         </svg>
-        Add HiHello Business Card
+        <span class="button-text">Add HiHello Business Card</span>
       </a>
     </div>
     
