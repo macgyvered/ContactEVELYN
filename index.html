@@ -100,18 +100,13 @@
     .subtitle {
       font-family: 'Times New Roman', serif;
       font-size: 1.3em;
-      color: #2375A9;
+      color: white;
       margin-bottom: 2em;
-      text-shadow: 
-        -1px -1px 0 white,
-        1px -1px 0 white,
-        -1px 1px 0 white,
-        1px 1px 0 white,
-        -2px 0 0 white,
-        2px 0 0 white,
-        0 -2px 0 white,
-        0 2px 0 white;
-      font-weight: 500;
+      -webkit-text-stroke: 1px #2375A9;
+      text-stroke: 1px #2375A9;
+      -webkit-text-fill-color: white;
+      text-fill-color: white;
+      font-weight: bold;
       position: relative;
       display: inline-block;
       padding: 0 2em;
@@ -124,16 +119,8 @@
       top: 50%;
       width: 1.5em;
       height: 2px;
-      background: #2375A9;
-      box-shadow: 
-        -1px -1px 0 white,
-        1px -1px 0 white,
-        -1px 1px 0 white,
-        1px 1px 0 white,
-        -2px 0 0 white,
-        2px 0 0 white,
-        0 -2px 0 white,
-        0 2px 0 white;
+      background: white;
+      outline: 1px solid #2375A9;
       transform: translateY(-50%);
     }
 
